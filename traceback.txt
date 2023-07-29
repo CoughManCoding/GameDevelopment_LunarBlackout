@@ -1,0 +1,32 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 1174, in script
+    stop stop
+  File "renpy/common/000statements.rpy", line 263, in execute_stop_music
+    renpy.music.stop(fadeout=eval(p["fadeout"]), channel=channel)
+Exception: Audio channel 'stop' is unknown.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 1174, in script
+    stop stop
+  File "/Users/siddharth/Desktop/UVic/Semester 3/Capstone/renpy-8.1.0-sdk/renpy/ast.py", line 2259, in execute
+    self.call("execute")
+  File "/Users/siddharth/Desktop/UVic/Semester 3/Capstone/renpy-8.1.0-sdk/renpy/ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "/Users/siddharth/Desktop/UVic/Semester 3/Capstone/renpy-8.1.0-sdk/renpy/statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 263, in execute_stop_music
+    renpy.music.stop(fadeout=eval(p["fadeout"]), channel=channel)
+  File "/Users/siddharth/Desktop/UVic/Semester 3/Capstone/renpy-8.1.0-sdk/renpy/audio/music.py", line 297, in stop
+    c = get_channel(channel)
+  File "/Users/siddharth/Desktop/UVic/Semester 3/Capstone/renpy-8.1.0-sdk/renpy/audio/audio.py", line 947, in get_channel
+    raise Exception("Audio channel %r is unknown." % name)
+Exception: Audio channel 'stop' is unknown.
+
+macOS-13.4.1-arm64-arm-64bit arm64
+Ren'Py 8.1.0.23051307
+Lunar Blackout 0.1
+Sat Jul 15 12:34:11 2023
